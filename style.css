@@ -66,6 +66,11 @@ td.intro {
   vertical-align: middle;
 }
 
+
+td.toppart-table {
+	vertical-align: middle;
+}
+
 td.publications-video {
 	vertical-align: middle;
 	margin: auto;
@@ -129,4 +134,50 @@ h5 {
 p {
     font-family: "Noto Sans", Arial;
     font-size: 16px;
+}
+
+@media	(max-width: 600px){
+.page-container {
+    width: 90%;
+	margin: auto;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+.button {
+    padding: 8px 7px;
+    background-color: white;
+    border-radius: 14px;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(185, 185, 185);
+}
+
+.icon {
+	font-size: 16px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+a {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+.publications video {
+	width: 100%;
+}
 }
