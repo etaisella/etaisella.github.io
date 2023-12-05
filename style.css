@@ -1,0 +1,137 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+.publications video {
+	width: 90%;
+}	
+
+.page-container {
+    width: 60%;
+	margin: auto;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.linkedin-button {
+	color: rgb(100, 180, 255);
+}
+
+.scholar-button {
+	color: rgb(0, 100, 200);
+}
+
+.mail-button {
+	color: rgb(250, 50, 50);
+}
+
+.button {
+    padding: 16px 14px;
+    background-color: white;
+    border-radius: 24px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(185, 185, 185);
+}
+
+.paper-button {
+    padding: 4px 4px;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(185, 185, 185);
+}
+
+.paper-button:hover {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.tiny {
+	font-size: 10px
+}
+
+table, td, th {
+	border: 0px solid black;
+	padding: 10px;
+}
+
+.button:hover {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+td.intro {
+  vertical-align: middle;
+}
+
+td.publications-video {
+	vertical-align: middle;
+	margin: auto;
+}
+
+td.timeline-date {
+	vertical-align: middle;
+	margin: auto;
+}
+
+.icon {
+	font-size: 22px;
+}
+
+h1 {
+    font-family: "Noto Sans", Arial;
+    font-size: 52px;
+    color: rgb(95, 95, 95);
+    letter-spacing: -1px;
+    word-spacing: 8px;
+	line-height: 0px;
+	margin-top: 60px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Noto Sans", Arial;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: "Noto Sans", Arial;
+    font-size: 17px;
+}
+
+a {
+	font-family: "Noto Sans", Arial;
+    font-size: 17px;
+	color: rgb(50, 80, 200);
+}
+
+a:hover {
+	color: rgb(200, 180, 255);
+}
+
+h4 {
+    font-family: "Noto Sans", Arial;
+    font-size: 18px;
+    font-weight: bold;
+	color: rgb(150, 0, 150);
+}
+
+h5 {
+    font-family: "Noto Sans", Arial;
+    font-size: 20px;
+}
+
+p {
+    font-family: "Noto Sans", Arial;
+    font-size: 16px;
+}
+
+li {
+    font-family: "Noto Sans", Arial;
+    font-size: 16px;
+}
