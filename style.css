@@ -3,11 +3,11 @@ body {
   }
 
 .publications video {
-	width: 90%;
+	width: 100%;
 }	
 
 .page-container {
-    width: 60%;
+    width: 55%;
 	margin: auto;
 }
 
@@ -56,6 +56,10 @@ body {
 table, td, th {
 	border: 0px solid black;
 	padding: 10px;
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 1em;
 }
 
 .button:hover {
