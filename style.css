@@ -59,7 +59,7 @@ table, td, th {
 }
 
 tr.spaceUnder>td {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .button:hover {
@@ -125,7 +125,7 @@ a:hover {
 
 h4 {
     font-family: "Noto Sans", Arial;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
 	color: rgb(150, 0, 150);
 }
@@ -133,6 +133,10 @@ h4 {
 h5 {
     font-family: "Noto Sans", Arial;
     font-size: 20px;
+}
+
+h6 {
+	color: rgb(170, 0, 170);
 }
 
 p {
