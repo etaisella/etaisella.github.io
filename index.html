@@ -43,7 +43,7 @@
 					<h1>Etai Sella</h1>
 				</td>
 				<td align="center" rowspan="4" class="intro">
-					<img src="./images/me2.jpg" class="profile-pic" width="60%">
+					<img id="profile-pic" src="./images/me2.jpg" class="profile-pic" width="60%" alt="Etai Sella" data-default-src="./images/me2.jpg" data-wink-src="./images/me_wink.png">
 				</td>
 			</tr>
 			<tr>
@@ -192,4 +192,31 @@
 		</div>
 	</section>
 </div>
+<script>
+(function () {
+  var img = document.getElementById('profile-pic');
+  if (!img) return;
+  var defaultSrc = img.getAttribute('data-default-src') || './images/me2.jpg';
+  var winkSrc = img.getAttribute('data-wink-src') || './images/me_wink.png';
+  var revertTimer = null;
+  function clearRevertTimer() {
+    if (revertTimer) {
+      clearTimeout(revertTimer);
+      revertTimer = null;
+    }
+  }
+  img.addEventListener('mouseenter', function () {
+    clearRevertTimer();
+    img.setAttribute('src', winkSrc);
+    revertTimer = setTimeout(function () {
+      revertTimer = null;
+      img.setAttribute('src', defaultSrc);
+    }, 250);
+  });
+  img.addEventListener('mouseleave', function () {
+    clearRevertTimer();
+    img.setAttribute('src', defaultSrc);
+  });
+})();
+</script>
 </body></html>
