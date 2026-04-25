@@ -199,6 +199,25 @@
   var defaultSrc = img.getAttribute('data-default-src') || './images/me2.jpg';
   var winkSrc = img.getAttribute('data-wink-src') || './images/me_wink.png';
   var revertTimer = null;
+  var isHovering = false;
+  var pendingRevertAfterLoad = false;
+  var winkLoaded = false;
+
+  var winkPreload = new Image();
+  winkPreload.addEventListener('load', function () {
+    winkLoaded = true;
+    if (isHovering && pendingRevertAfterLoad) {
+      pendingRevertAfterLoad = false;
+      revertTimer = setTimeout(function () {
+        revertTimer = null;
+        if (isHovering) {
+          img.setAttribute('src', defaultSrc);
+        }
+      }, 250);
+    }
+  });
+  winkPreload.src = winkSrc;
+
   function clearRevertTimer() {
     if (revertTimer) {
       clearTimeout(revertTimer);
@@ -206,14 +225,24 @@
     }
   }
   img.addEventListener('mouseenter', function () {
+    isHovering = true;
     clearRevertTimer();
+    pendingRevertAfterLoad = false;
     img.setAttribute('src', winkSrc);
-    revertTimer = setTimeout(function () {
-      revertTimer = null;
-      img.setAttribute('src', defaultSrc);
-    }, 250);
+    if (winkLoaded) {
+      revertTimer = setTimeout(function () {
+        revertTimer = null;
+        if (isHovering) {
+          img.setAttribute('src', defaultSrc);
+        }
+      }, 250);
+    } else {
+      pendingRevertAfterLoad = true;
+    }
   });
   img.addEventListener('mouseleave', function () {
+    isHovering = false;
+    pendingRevertAfterLoad = false;
     clearRevertTimer();
     img.setAttribute('src', defaultSrc);
   });
