@@ -75,6 +75,157 @@ td.toppart-table {
 	vertical-align: middle;
 }
 
+/* Publications */
+.year-group {
+	display: flex;
+	gap: 36px;
+	margin-top: 28px;
+}
+
+.year-label {
+	flex: 0 0 56px;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgb(180, 180, 180);
+	padding-top: 14px;
+	text-align: right;
+	position: relative;
+}
+
+.year-label::after {
+	content: "";
+	position: absolute;
+	right: -27px;
+	top: 22px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: rgb(200, 200, 200);
+	box-shadow: 0 0 0 3px white;
+}
+
+.year-items {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	min-width: 0;
+	border-left: 2px solid rgb(232, 232, 232);
+	padding-left: 14px;
+	margin-left: -14px;
+	position: relative;
+}
+
+.year-items::before,
+.year-items::after {
+	content: "";
+	position: absolute;
+	left: -2px;
+	width: 10px;
+	height: 2px;
+	background: rgb(232, 232, 232);
+}
+
+.year-items::before {
+	top: 0;
+}
+
+.year-items::after {
+	bottom: 0;
+}
+
+.pub {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 14px 16px;
+	border-radius: 14px;
+	border: 1px solid transparent;
+	text-align: left;
+}
+
+.pub-media {
+	flex: 0 0 22%;
+}
+
+.pub-media video {
+	width: 100%;
+	display: block;
+	border-radius: 8px;
+}
+
+.pub-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.pub-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 4px 0;
+}
+
+.pub-authors {
+	margin: 0 0 4px 0;
+	line-height: 1.5;
+}
+
+.pub-venue {
+	margin: 0 0 10px 0;
+}
+
+.pub-highlight {
+	color: rgb(255, 170, 0);
+}
+
+.pub-links {
+	display: flex;
+	gap: 8px;
+}
+
+.pub-featured {
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+.pub-meta {
+	background: linear-gradient(90deg, rgba(8, 102, 255, 0.035), rgba(8, 102, 255, 0.008));
+	border-color: rgba(8, 102, 255, 0.14);
+	border-left: 3px solid rgba(8, 102, 255, 0.45);
+}
+
+.pub-snap {
+	background: linear-gradient(90deg, rgba(255, 252, 0, 0.1), rgba(255, 252, 0, 0.02));
+	border-color: rgba(200, 190, 0, 0.22);
+	border-left: 3px solid rgba(255, 212, 0, 0.6);
+}
+
+.company-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.3px;
+	padding: 3px 10px;
+	border-radius: 999px;
+	margin-bottom: 8px;
+}
+
+.company-badge.meta {
+	color: #0866FF;
+	background: rgba(8, 102, 255, 0.08);
+}
+
+.company-badge.snap {
+	color: #111;
+	background: rgba(255, 252, 0, 0.55);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.company-badge i {
+	font-size: 14px;
+}
+
 td.publications-video {
 	vertical-align: middle;
 	margin: auto;
@@ -244,53 +395,64 @@ h4 {
 }
 
 /* Mobile publications styling */
-.publications-table {
-    display: block !important;
+.year-group {
+	gap: 22px;
+	margin-top: 18px;
 }
 
-.publications-table tr {
-    display: block !important;
-    margin-bottom: 20px;
+.year-label {
+	flex: 0 0 38px;
+	font-size: 14px;
+	padding-top: 12px;
 }
 
-.publications-table td {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
+.year-label::after {
+	right: -19px;
+	top: 18px;
 }
 
-.publications-table .publications-video {
-    margin-bottom: -2px;
+.year-items {
+	padding-left: 8px;
+	margin-left: -8px;
 }
 
-.publications video {
-	width: 75% !important;
+.pub {
+	flex-direction: column;
+	text-align: center;
+	gap: 8px;
+	padding: 12px 10px;
+}
+
+.pub-media {
+	flex: none;
+	width: 75%;
 	max-width: 300px;
 }
 
-/* Smaller fonts for publications on mobile */
-.publications-table h3 {
-    font-size: 11px !important;
-    line-height: 1.3;
-    margin-bottom: 5px;
-    padding: 0 1px;
+.pub-title {
+	font-size: 13px;
 }
 
-.publications-table h3 a {
-    font-size: 11px !important;
+.pub-authors {
+	font-size: 11px !important;
+	line-height: 1.3;
 }
 
-.publications-table h4 {
-    font-size: 10px !important;
-    line-height: 1.2;
-    margin-bottom: 8px;
-    padding: 0 1px;
+.pub-authors a {
+	font-size: 11px !important;
 }
 
-.publications-table .paper-button {
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 8px;
-    margin: 2px 4px;
+.pub-venue {
+	font-size: 11px !important;
+	margin-bottom: 8px;
+}
+
+.pub-links {
+	justify-content: center;
+}
+
+.pub .paper-button {
+	padding: 6px 12px;
+	font-size: 14px;
 }
 }
